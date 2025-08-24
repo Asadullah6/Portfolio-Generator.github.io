@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>     
+
+</head>
+<body>
+    <!-- Generator Section -->
+    <div id="generatorSection" class="generator-section">
+        <div class="generator-card">
+            <div class="generator-title">
+                <h1><i class="fas fa-magic"></i> Portfolio Generator</h1>
+                <p>Create a stunning portfolio website from your GitHub profile</p>
+            </div>
+
+            <form id="portfolioForm">
+                <div class="form-group">
+                    <label for="username">GitHub Username</label>
+                    <input type="text" id="username" placeholder="e.g., octocat" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Choose Theme</label>
+                    <div class="theme-selector">
+                        <div class="theme-option theme-modern active" data-theme="modern">
+                            <div class="theme-preview"></div>
+                            <strong>Modern Dark</strong>
+                        </div>
+                        <div class="theme-option theme-minimal" data-theme="minimal">
+                            <div class="theme-preview"></div>
+                            <strong>Minimal Light</strong>
+                        </div>
+                        <div class="theme-option theme-creative" data-theme="creative">
+                            <div class="theme-preview"></div>
+                            <strong>Creative Gradient</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" id="generateBtn" class="generate-btn">
+                    <i class="fas fa-rocket"></i> Generate Portfolio
+                </button>
+            </form>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Generating your amazing portfolio...</p>
+            </div>
+
+            <a href="#" id="demoBtn" class="demo-btn">
+                <i class="fas fa-play"></i> Try with demo data (octocat)
+            </a>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolioSection" class="portfolio-section">
+        <!-- Controls -->
+        <div class="portfolio-controls">
+            <div class="container">
+                <div class="controls-content">
+                    <div>
+                        <h2 id="portfolioOwner">Portfolio Preview</h2>
+                    </div>
+                    <div class="controls-right">
+                        <label for="themeSelector" class="visually-hidden">Choose Theme</label>
+                        <select id="themeSelector">
+                            <option value="modern">Modern Dark</option>
+                            <option value="minimal">Minimal Light</option>
+                            <option value="creative">Creative Gradient</option>
+                        </select>
+                        <button class="btn btn-secondary" onclick="goBackToGenerator()">
+                            <i class="fas fa-arrow-left"></i> New Portfolio
+                        </button>
+                        <button class="btn btn-primary" onclick="window.print()">
+                            <i class="fas fa-download"></i> Export PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Content -->
+        <div id="portfolioContent" class="portfolio-modern">
+            <!-- Content will be dynamically generated -->
+        </div>
+        <footer class="portfolio-footer">
+    <div class="footer-container">
+        <p class="footer-title">Asadullah channa</p>
+        <p class="footer-copy">
+            © 2025 All rights reserved. Built with ❤️ for developers.
+        </p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+    </style>
+</body> 
+</html> 
+</html>
